@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Infographic Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js">
+    var chart = echarts.init(document.getElementById('chart'));
+
+    // Define your chart data
+    var data = {
+        categories: ['Category A', 'Category B', 'Category C'],
+        values: [120, 200, 150]
+    };
+
+    // Configure the chart
+    var options = {
+        title: {
+            text: 'Infographic Title'
+        },
+        xAxis: {
+            data: data.categories
+        },
+        yAxis: {},
+        series: [{
+            name: 'Value',
+            type: 'bar',
+            data: data.values
+        }]
+    };
+
+    // Set the chart configuration and render the chart
+    chart.setOption(options);
+</script>
+</head>
+<body>
+    <div id="chart" style="width: 800px; height: 600px;"></div>
+
+    <script>
+        // Add your chart data and configuration here
+    </script>
+</body>
+</html>
